@@ -1,0 +1,13 @@
+#include "Background.h"
+#include "DxLib.h"
+
+//‰Šú‰»
+void Background::Init()
+{
+	imageHandle = LoadGraph("img/Background.png");
+}
+//•`‰æ
+void Background::Draw(float cameraX)
+{
+	DrawGraph(-(int)(cameraX*0.5f), 0, imageHandle, TRUE);
+}
